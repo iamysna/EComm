@@ -10,6 +10,6 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}.
-This is shitanshuThis is shitanshuThis is shitanshuThis is shitanshu </P>
+</P>
 </body>
 </html>
