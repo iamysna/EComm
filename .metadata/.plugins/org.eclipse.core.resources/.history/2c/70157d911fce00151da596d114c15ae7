@@ -1,0 +1,7 @@
+package com.ecomm.pojo;
+
+public class Admin {
+	private Integer adminId;
+	private Integer productId;
+
+}

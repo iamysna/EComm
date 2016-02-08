@@ -1,0 +1,5 @@
+package com.ecomm.pojo;
+
+public class Customer {
+
+}

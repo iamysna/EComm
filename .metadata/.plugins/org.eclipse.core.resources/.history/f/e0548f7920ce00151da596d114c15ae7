@@ -1,0 +1,13 @@
+package com.ecomm.pojo;
+
+public class User {
+	private Integer userId;
+	private String firstName;
+	private String lastName;
+	private String emailId;
+	private Long mobileNumber;
+	private Integer age;
+	private String gender;
+	
+
+}
