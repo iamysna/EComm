@@ -1,4 +1,4 @@
-package com.ecomm.trail;
+package com.ecomm.trail.Controller;
 
 
 import java.util.Locale;
@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.ecomm.trail.forms.Login;
 
 /**
  * Handles requests for the application home page.
