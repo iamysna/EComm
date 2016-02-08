@@ -1,14 +1,4 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
-<html>
-<head>
-	<title>Home</title>
-</head>
-<body>
-<h1>
-	Hello world!  
-</h1>
+<!DOCTYPE html>
 
-<P>  The time on the server is ${serverTime}. </P>
-</body>
-</html>
+<%@include file="header.jsp" %><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<%@include file="footer.html" %>

@@ -1,0 +1,743 @@
+html,body,ul,li,table,th,tr,td,input,p,h1,h2,h3,h4,h5,h6,div,span{
+	margin:0;
+	border:0;
+	padding:0;
+}
+body{
+	position:relative;
+	width:100%;
+	min-width:125em;
+	font-size:100%;
+	text-align:center;
+	font-family:"open sans","century Gothic",arial, "sans serif";
+	color:#333333;
+}
+a{
+	text-decoration:none;
+	color:inherit;
+}
+a:HOVER, a:LINK, a:ACTIVE{
+	text-decoration:none;
+	color:inherit;
+	outline: none;
+}
+
+ul,li{
+	list-style:none;
+}
+
+/* ============================== ************************************** Desktop CSS ************************************* =============================== */
+
+/**************************************************** MAIN NAVIGATION PART *****************************************************/
+nav#main-nav{
+	width:100%;
+	min-width:125em;
+	height:50px;
+	border-bottom: 0px solid #d9d9d9;
+	position: fixed;
+	top:0em;
+	left:0em;
+	background-color:#f2f2f2;
+	z-index: 1000;
+}
+nav#main-nav h1#desktop-name{
+	font-size:4em;
+	font-weight:bold;
+	display:inline-block;
+	margin: 0.2em 0 0 1em;
+	float:left;
+}
+nav#main-nav #name-first-half{
+	color : #ff704d;
+}
+
+nav#main-nav #name-second-half{
+	color: #4da6ff;
+}
+
+nav#main-nav form#desktop-search{
+	float:left;
+	
+}
+
+nav#main-nav form#desktop-search div{
+	display: inline-block;
+	padding: 0.75em 0 0 2em;
+	margin-top: 0.25em;
+}
+nav#main-nav form#desktop-search input{
+	display:inline-block;
+	border:1px solid #ffad99;
+	border-right-color:transparent;
+	margin-right:-0.25em;
+	padding:0.45em;
+	width:25em;
+	font-size:2em;
+	outline: none;
+} 
+
+
+nav#main-nav form#desktop-search input::-webkit-input-placeholder { color:#8c8c8c; font-style: italic; }
+nav#main-nav form#desktop-search input::-moz-placeholder { color:#8c8c8c; font-style: italic;} /* firefox 19+ */
+nav#main-nav form#desktop-search input:-ms-input-placeholder { color:#8c8c8c; font-style: italic; } /* ie */
+
+
+ nav#main-nav form#desktop-search button{
+	display:inline-block;
+	border:1px solid #ff704d;
+	background-color:#ff704d;
+	color:white;
+	padding: 0em;
+	margin: 0em;
+}
+nav#main-nav form#desktop-search button:HOVER{
+	opacity:0.7;
+}
+nav#main-nav form#desktop-search button span{
+	font-size: 2em;
+	padding:0.5em 1.5em 0.8em ;
+} 
+
+
+
+div#deskto-navigation{
+	display:inline-block;
+	position:relative;
+	font-size:1.02em;
+	font-weight: bold;
+	color: #003399;
+	float:right;
+	margin:1em 8em 0 0;
+}
+
+div#deskto-navigation>div {
+	display:inline-block;
+	position:relative;
+	
+}
+
+div#deskto-navigation>div:hover a{
+	background-color: #d9d9d9; 
+}
+
+div#deskto-navigation>div:nth-child(2){
+	margin: 0 2em 0;
+}
+
+div#deskto-navigation div>a {
+	display:inline-block;
+	position:relative;
+	padding:0.75em;
+}
+
+div#deskto-navigation>div:nth-child(3) a{
+	padding: 1em 1.05em;
+	border: 1px solid #003399;
+	border-radius:50%;
+}
+
+
+div#deskto-navigation div>a>span:nth-child(1){
+	display:block;
+	position:relative;
+	font-size: 2.1em;
+}
+
+div#deskto-navigation div#cart a>span#counter{
+	display:inline-block;
+	font-size:1.5em;
+	color:white;
+	font-weight:bold;
+	padding:0 0.2em;
+	background: red;
+	border-radius:50%;
+	position:absolute;
+	top:-0.4em;
+	right:0.15em;
+}
+
+div#my-account div#login-popup{
+	background-color: #d9d9d9; 
+	width:28em;
+	position:absolute;
+	top:100%;
+	right:0;
+	font-size:1.2em;
+	display:none;
+}
+
+
+div#my-account:hover div#login-popup{
+	display:inline-block;
+}
+
+div#login-popup>div{
+	display:inline-block;
+	position:;
+	margin:0.5em;
+	padding-top: 1.5em;
+}
+
+div#login-popup>div>a{
+	display:inline-block;
+	padding: 1em 2em;
+	display: inline-block;
+	color:white;
+	
+}
+div#login-popup>div>a:HOVER{
+	opacity:0.2;	
+}
+
+div#login-popup>div:nth-child(1)>a{
+	background: #75a81d;
+}
+
+div#login-popup>div:nth-child(2)>a{
+	background: #F27435;
+}
+
+div#login-popup>div>span{
+	padding: 1em;
+	display: inline-block;
+}
+div#login-popup>div>span a{
+	color: #0000ff;
+}
+div#login-popup>div>span a:HOVER{
+	text-decoration: underline;
+}
+/***************************************************** CATEGORY NAVIGATION PART *****************************************************/
+nav#category-nav{
+	position: fixed;
+	left:0;
+	top:70px;
+	width:100%;
+	min-width:125em;
+	height:30px;
+	background-color: #2FB8AC;
+	color: #ffffff;
+	z-index: 999;
+}
+
+nav#category-nav div>p{
+	display: inline-block;
+	font-size: 1.5em;
+	position: absolute;
+	left:2em;
+	text-transform: uppercase;
+	margin-top:0.25em;
+	margin-right: 0.75em;
+	font-weight:bold;
+}
+ 
+nav#category-nav div>ul {
+	display: inline-block;
+	font-size: 1.5em;
+	position: absolute;
+	left:10em;
+}
+nav#category-nav div>ul>li{
+	display: inline-block;
+	padding: 0.3em 1em; 
+	cursor: pointer;
+	position: relative;
+}
+
+nav#category-nav div>ul>li:hover{
+	background-color: white;
+	color: #000000;
+}
+nav#category-nav div>ul>li>span{
+	padding-left: 0.25em;
+	margin: 0;
+	font-size: 0.65em;
+	opacity:0.65;
+}
+
+nav#category-nav div>ul>li>ul{
+	background: white;
+	color: #000000;
+	width:50em;
+	position:absolute;
+	top:30px;
+	left:0;
+	display:none;
+	padding: 0;
+	margin: 0;
+	cursor: auto;
+	box-shadow: 0px 0px 5px black;
+}
+nav#category-nav div>ul>li:hover>ul{
+	display: block;
+}
+nav#category-nav div>ul>li>ul>li{
+	display: inline-block;
+	position:relative;
+	left:0;
+	float: left !important;
+	margin: 0.5em;
+	padding: 0.5em;
+	text-align: left;	
+}
+
+nav#category-nav div>ul>li>ul>li>span{
+	display:inline-block;
+	padding:0.25em 0;
+	margin-bottom:0.5em;
+	border-bottom: 2px solid #b3b3b3;
+}
+
+nav#category-nav div>ul>li>ul>li>ul{
+	display: block;	
+	position: relative;
+	left:0;
+	margin: 0;
+	padding: 00;
+}
+nav#category-nav div>ul>li>ul>li>ul>li{
+	display: block;
+	padding: 0.2em 0;
+	margin: 0;
+	text-align: left;
+	font-size: 0.9em;
+}
+nav#category-nav div>ul>li>ul>li>ul>li>a{
+	text-decoration: underline;
+}
+nav#category-nav div>ul>li>ul>li>ul>li>a:hover{
+	opacity:0.5;
+}
+
+/***************************************************** MAIN BODY SECTION *****************************************************/
+section#body-section{
+	margin-top: 12em !important;
+}
+section#body-section aside#filter-search{
+	width:20%;
+	height:2em;
+	display: block;
+	float: left;
+}
+section#body-section div#product-section{
+	width:80%;
+	float: left;
+}
+
+section#body-section div#product-section div.product-category{
+	padding:0;
+	margin-bottom:8em;
+	max-width: 90%;
+	text-align: left;
+}
+section#body-section div#product-section div.product-category>h4{
+	font-weight: bold;
+	padding: 0.5em;
+	margin:5px 4px 5px 0;
+	background-color: #cccccc;
+}
+section#body-section div#product-section div.product-category div.product{
+	width:24.7%;
+	background-color:#f2f2f2;
+	border:2px solid white;
+	display:inline-block;
+}
+section#body-section div#product-section div.product-category div.product:hover{
+	border:2px solid orange;
+}
+section#body-section div#product-section div.product-category div.product div.img-container img{
+	display: block;
+	max-width:100%;
+}
+
+section#body-section div#product-section div.product-category div.product div.img-container span{
+	display:block;
+	padding: 0.5em;
+	font-weight:bolder;
+	font-size: 1.5em;
+}
+
+
+/***************************************************** SELLER REGISTRATION SECTION *****************************************************/
+form#seller-registration-form{
+}
+form#seller-registration-form p{
+	font-size: 2em;
+	font-weight: bolder;
+	display: inline-block;
+	background-color: #75a81d;
+	color: white;
+	text-transform:uppercase;
+	padding: 0.5em;
+	position: relative;
+}
+form#seller-registration-form div#form-wrapper{
+	display:inline-block;
+	margin:2em 2em 5em 2em;
+	border: 2px solid black;
+	padding:2em;
+	position: relative;
+	background-color: #f0f5f5;
+}
+form#seller-registration-form div#user-details{
+	display: inline-block;
+	margin-right: 3em;
+	position: relative;
+}
+
+form#seller-registration-form div#address-details{
+	display: inline-block;
+	position: relative;
+}
+div#address-details span{
+	display: inline-block;
+	position: absolute;
+	right: 13em;
+	font-size: 1.25em;
+	padding-top: 0.75em;
+	font-weight: bold;
+}
+div#address-details span a{
+	color: #0000ff;
+	text-decoration: underline;
+	padding:0 0.5em;
+}
+div#address-details span a:HOVER{
+	opacity:0.8;
+}
+form#seller-registration-form input{
+	display:block;
+	width:20em;
+	font-size: 1.85em;
+	padding: 0.25em;
+	margin: 0.5em 0;
+	border: 1px solid black;
+	color:green;
+	position: relative;
+}
+form#seller-registration-form input:FOCUS{
+	outline-color: red; 
+}
+input#submit-button{
+	max-width: 30%;
+	font-weight: bolder;
+	background-color: #75a81d;
+	color: white !important;
+	left: 14em;
+}
+
+input#submit-button:HOVER{
+	opacity:0.8;
+}
+
+
+form#seller-registration-form input::-webkit-input-placeholder { color:green; font-style: italic;}
+form#seller-registration-form input::-moz-placeholder { color:green; font-style: italic;} /* firefox 19+ */
+form#seller-registration-form input::-ms-input-placeholder { color:green; font-style: italic;} /* ie */
+
+form#seller-registration-form small{
+	color: red;
+	font-size:1.1em;
+	position:relative;
+	display: block;
+	text-align: left;
+}
+
+
+/***************************************************** USER REGISTRATION SECTION *****************************************************/
+
+form#customer-registration {
+	text-align:center;
+	width:100%;
+	max-width:45em;
+	display:inline-block;
+	padding:3em 2em;
+	margin:1.6em 0;
+	background-color: #f16b27;
+}
+
+form#customer-registration p{
+	font-size: 2em;
+	color: white;
+	font-weight: bold;
+}
+
+form#customer-registration input{
+	display: block;
+	width:100%;
+	padding: 0.5em;
+	margin:1em 0;
+	font-size: 1.5em;
+}
+form#customer-registration input:nth-child(7){
+	border-radius:5px;
+	background: rgba(0,0,0,0.75);
+	color: white;
+	font-weight: bold;
+}
+form#customer-registration input:nth-child(7):hover{
+	background: rgba(0,0,0,0.45);
+}
+
+form#customer-registration span{
+	color:white;
+	display:block;
+	font-size: 1.5em;
+}
+form#customer-registration span a{
+	color:#2e5cb8;
+	font-weight: bolder;
+}
+form#customer-registration span a:hover{
+	text-decoration: underline;
+}
+
+/***************************************************** SELLER LOGIN SECTION *****************************************************/
+
+form#login p{
+	font-size: 2em;
+	font-weight: bolder;
+	display: inline-block;
+	background-color: #75a81d;
+	color: white;
+	text-transform:uppercase;
+	padding: 0.5em;
+	position: relative;
+	
+}
+form#login small{
+	display:inline-block;
+	font-size:1.8em;
+	font-weight:bold;
+	color: #990000;
+}
+div#loginform-wrapper{
+	display:inline-block;
+	margin:15em 4em 9.4em 2em;
+	border: 3px solid black;
+	padding:3.5em 2em;
+	position: relative;
+	background-color: #f0f5f5;
+}
+form#login input {
+	display:block;
+	width:22em;
+	font-size: 1.85em;
+	padding: 0.25em;
+	margin: 1.8em 0;
+	border: 2.5px solid black;
+	color:green;
+	position: relative;	
+}
+
+form#login span{
+	display: inline-block;
+	position: relative;
+	font-size: 1.25em;
+	padding-top: 0.75em;
+	font-weight: bold;
+}
+
+form#login span a{
+	color: #0000ff;
+	text-decoration: underline;
+	padding:0 0.5em;
+}
+
+
+form#login span a:HOVER{
+	opacity:0.8;
+}
+
+input#login-button{
+	font-weight: bolder;
+	background-color: #75a81d;
+	color: white !important;
+	opacity:0.8;
+	margin-top: 2em !important;
+}
+
+input#login-button:HOVER{
+	opacity:0.6;
+}
+/***************************************************** USER LOGIN SECTION *****************************************************/
+
+form#user-login,  {
+	text-align:center;
+	width:100%;
+	max-width:45em;
+	display:inline-block;
+	padding:3em 2em;
+	margin:9.25em 0;
+}
+
+
+form#user-login{
+	background-color: #f16b27;
+}
+
+form#user-login p{
+	font-size: 2em;
+	color: white;
+	font-weight: bold;
+}
+
+form#user-login input{
+	display: block;
+	width:100%;
+	padding: 0.5em;
+	margin:1em 0;
+	font-size: 1.5em;
+}
+form#user-login input:nth-child(4){
+	border-radius:5px;
+	background: rgba(0,0,0,0.75);
+	color: white;
+	font-weight: bold;
+}
+form#user-login input:nth-child(4):hover{
+	background: rgba(0,0,0,0.45);
+}
+
+form#user-login span{
+	color:white;
+	display:block;
+	font-size: 1.5em;
+}
+form#user-login span a{
+	color:#2e5cb8;
+	font-weight: bolder;
+}
+form#user-login span a:hover{
+	text-decoration: underline;
+}
+
+
+
+
+
+/***************************************************** FOOTER SECTION *****************************************************/
+
+footer{
+	width:100%;
+	padding:1em;
+	position:static;
+	color:white;
+	background-color: grey;
+}
+
+footer p{
+	font-size: large;
+	font-weight:normal;
+	padding-top: 2em;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color:lime;
+}
+
+li a {
+    display: block;
+    color: ;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+    
+}
+
+
+/*-----------Menus css-----------------*/
+/* #menu-v li, #menu-v a {zoom:1;} Hacks for IE6, IE7
+#menu-v, #menu-v ul
+{
+    width: 180px; Main Menu Item widths
+    border: 1px solid #ccc;
+    border-top:none;
+    position: relative; font-size:0;
+    list-style: none; margin: 0; padding: 0; display:block;
+    z-index:9;
+}
+                
+Top level menu links style
+---------------------------------------
+
+#menu-v li
+{
+    background: #FFF url(bg.gif) repeat-x 0 2px;
+    list-style: none; margin: 0; padding: 0;
+}
+#menu-v li a
+{
+    font: normal 12px Arial;
+    border-top: 1px solid #ccc;
+    display: block;
+    overflow: auto; force hasLayout in IE7
+    color: black;
+    text-decoration: none;
+    line-height:26px;
+    padding-left:26px;            
+}
+#menu-v ul li a
+{
+    line-height:30px;
+}
+                
+#menu-v li a.arrow:hover
+{
+    background-image:url(arrowon.gif);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+}
+      */   
+/*Sub level menu items
+---------------------------------------*/
+/* #menu-v li ul
+{
+    position: absolute;
+    width: 200px; Sub Menu Items width
+    visibility:hidden;
+}
+        
+#menu-v a.arrow
+{
+    background-image:url(arrow.gif);
+    background-repeat: no-repeat;
+    background-position: 97% 50%;
+}
+#menu-v li:hover, #menu-v li.onhover
+{
+    background-position:0 -62px;
+}
+#menu-v ul li
+{
+    background: rgba(255, 255, 255, 0.86);
+    background-image:none;
+}
+#menu-v ul li:hover, #menu-v ul li.onhover
+{
+    background: #FFF;
+    background-image:none;
+} */
+        
+/* Holly Hack for IE \
+* html #menu-v  li
+{
+    float:left;
+    height: 1%;
+}
+* html #menu-v  li a
+{
+    height: 1%;
+}
+
+/* ============================== ************************************* Tablet CSS ************************************* =============================== */
+/* ============================== ************************************* Mobile CSS ************************************* =============================== */
