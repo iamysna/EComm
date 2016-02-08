@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.ecomm.trail.forms.Login;
 import com.ecomm.trail.forms.Registration;
 
+
 /**
  * Handles requests for the application home page.
  */
@@ -29,7 +30,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = {"/","/home"}, method = RequestMethod.GET)
 	public String home() {
 	  return "home";
 	   }
@@ -44,6 +45,12 @@ public class HomeController {
 	public ModelAndView Registration(Locale locale, Model model) {
 		
 		return new ModelAndView("Registration","registration",new Registration());
+	}
+	
+	@RequestMapping(value="/proceedRegister", method=RequestMethod.POST)
+	public String addCustomer(@ModelAttribute("registration")Registration register, BindingResult result) {
+		
+		return "redirect:/home";
 	}
 		
 	/*@RequestMapping(value="/proceed", method=RequestMethod.POST)
