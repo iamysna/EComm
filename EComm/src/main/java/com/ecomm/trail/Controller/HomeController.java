@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ecomm.trail.forms.Login;
+import com.ecomm.trail.forms.Registration;
 
 /**
  * Handles requests for the application home page.
@@ -29,16 +30,27 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ModelAndView home(Locale locale, Model model) {
+	public String home() {
+	  return "home";
+	   }
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public ModelAndView login(Locale locale, Model model) {
 		
-		return new ModelAndView("home","login",new Login());
+		return new ModelAndView("login","login",new Login());
 	}
 	
-	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public String login(@ModelAttribute("login") Login login, BindingResult result, ServletResponse response,ModelAndView mv)
+	@RequestMapping(value = "/Registration", method = RequestMethod.GET)
+	public ModelAndView Registration(Locale locale, Model model) {
+		
+		return new ModelAndView("Registration","registration",new Registration());
+	}
+		
+	/*@RequestMapping(value="/proceed", method=RequestMethod.POST)
+	public String proceed(@ModelAttribute("login") Login login, BindingResult result, ServletResponse response,ModelAndView mv)
 	{
 		mv.addObject("uname", login.getUname());
 		return "login";
-	}
+	}*/
 	
 }
