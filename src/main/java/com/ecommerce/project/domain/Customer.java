@@ -1,5 +1,12 @@
 package com.ecommerce.project.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
 /**
  * 
  * @author Ravi
@@ -7,11 +14,17 @@ package com.ecommerce.project.domain;
  * @version 1.0
  *
  */
+@Entity
+@Table(name="customermaster")
+@PrimaryKeyJoinColumn(name="customerId")
 
-public class Customer {
+public class Customer extends User {
 	
+	
+	private Product product;
+	@Id
 	private Integer customerId;
-	private Integer productId;
+	
 	/**
 	 * @return the customerId
 	 */
@@ -25,18 +38,16 @@ public class Customer {
 		this.customerId = customerId;
 	}
 	/**
-	 * @return the productId
+	 * @return the product
 	 */
-	public Integer getProductId() {
-		return productId;
+	public Product getProduct() {
+		return product;
 	}
 	/**
-	 * @param productId the productId to set
+	 * @param product the product to set
 	 */
-	public void setProductId(Integer productId) {
-		this.productId = productId;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 	
-	
-
 }

@@ -6,6 +6,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ecommerce.project.domain.Customer;
+import com.ecommerce.project.domain.UserAuthentication;
+import com.ecommerce.project.domain.UserRoles;
+import com.ecommerce.project.services.UserService;
+import com.ecommerce.project.services.UserServiceImpl;
+
 /**
  * 
  * @author Ravi
@@ -50,12 +56,41 @@ public class UserController {
 			                                    @RequestParam("zipCCode") Integer zipCode)
 	{
 		
+		Customer customer=new Customer();
+		customer.setUserName(userName);
+		customer.setEmailId(emailId);
 		
+		customer.setAge(age);
+		customer.setMobileNo1(mobileNo1);
+		customer.setMobileNo2(mobileNo2);
+		customer.setAddressLine1(addressLine1);
+		customer.setAddressLine2(addressLine2);
+		customer.setCity(city);
+		customer.setState(state);
+		customer.setCountry(country);
+		customer.setZipCode(zipCode);
 		
+		UserAuthentication userAuthentication=new UserAuthentication();
+		userAuthentication.setUserName(emailId);
+		userAuthentication.setPassword(password);
 		
+		UserRoles userRoles=new UserRoles();
+		userRoles.setUserName(emailId);
+		userRoles.setUserRole("customer");
+		UserService userService=new UserServiceImpl();
+		Integer response=userService.registerCustomer(customer);
 		
-		return new ModelAndView();
+		if(response>0)
+		{
+			return new ModelAndView("success");
+		}
+		else
+		{
+		
+		return new ModelAndView("failure");
 	}
+	}
+	
 	
 	
 	
