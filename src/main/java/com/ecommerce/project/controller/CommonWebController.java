@@ -1,4 +1,4 @@
-package com.ecommerce.project;
+package com.ecommerce.project.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
