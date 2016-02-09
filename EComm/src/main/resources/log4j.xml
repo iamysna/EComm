@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.ecomm.trail">
+	<logger name="com.pac.controller">
 		<level value="info" />
 	</logger>
 	

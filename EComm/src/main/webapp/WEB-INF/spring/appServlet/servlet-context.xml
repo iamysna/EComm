@@ -21,8 +21,27 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.ecomm.trail" />
-	
-	
+	<context:component-scan base-package="com.pac.controller" />
+	<beans:bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<beans:property name="mappings">
+			<beans:props>
+
+				<beans:prop key="/login.htm">loginController</beans:prop>
+				<beans:prop key="/">loginController</beans:prop>
+				<beans:prop key="/login_sucess.htm">loginSucessController</beans:prop>
+
+
+			</beans:props>
+		</beans:property>
+
+	</beans:bean>
+	<beans:bean name="loginController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<beans:property name="viewName" value="login" />
+	</beans:bean>
+	<beans:bean name="loginSucessController"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<beans:property name="viewName" value="login_sucess" />
+	</beans:bean>
 	
 </beans:beans>

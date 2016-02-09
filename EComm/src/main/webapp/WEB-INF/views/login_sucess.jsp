@@ -4,15 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home page</title>
+<title>Insert title here</title>
 </head>
 <body>
 <center>
+login sucess
+<a href="">Add Product</a>
 
-<h1>E-comerce website</h1>
-<a href="login">Login</a><br>
-<a href="register">Register</a>
+<a href=""></a>
 
 </center>
+
 </body>
 </html>
