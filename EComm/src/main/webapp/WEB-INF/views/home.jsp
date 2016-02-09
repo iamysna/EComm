@@ -5,10 +5,12 @@
 	<title>Home</title>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
+	<br><br><h1 align="center">Nendrasys E-Commerce Website</h1><br>
 
-<P>  The time on the server is ${serverTime}. </P>
+	 <p align="center"><a href="http://localhost:8080/ecomm/login">Click here for Login</a><br>
+
+	 <p align="center"><a href="http://localhost:8080/ecomm/registerPage">Click here for Register</a>
+	
+
 </body>
 </html>
