@@ -11,7 +11,7 @@
 </head>
 <body><center>
 <h1 id="banner">Customer Login</h1>
-		<form:form name="f" commandName="loginUser" 
+		<form:form name="f" commandName="loginUser" action='j_spring_security_check'
 					method="POST">
 			<table>
 				<tr>
@@ -32,6 +32,7 @@
 				</tr>				
 			</table>
 		</form:form>
+		
 		
 
 Don't have an account?	

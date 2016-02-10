@@ -3,20 +3,20 @@ package com.ecomm.web;
 public class Productadd {
 
 	
-	private Integer id;
+	private Integer productid;
 	private String pname;
 	private String description;
 	private Integer price;
-	public Integer getId() {
-		return id;
+	public Integer getProductid() {
+		return productid;
 	}
-	public void setId(Integer id) {
-		this.id = id;
+	public void setProductid(Integer productid) {
+		this.productid = productid;
 	}
-	public String getName() {
+	public String getPname() {
 		return pname;
 	}
-	public void setName(String pname) {
+	public void setPname(String pname) {
 		this.pname = pname;
 	}
 	public String getDescription() {
@@ -31,5 +31,8 @@ public class Productadd {
 	public void setPrice(Integer price) {
 		this.price = price;
 	}
+	
+	
+	
 	
 }

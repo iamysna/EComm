@@ -17,25 +17,25 @@
  
     <table>
     <tr>
-        <td><form:label path="productid"></form:label></td>
+       	<td>productid:</td>
         <td><form:input path="productid" /></td>
     </tr>
     <tr>
-        <td><form:label path="productname"></form:label></td>
+       	<td>productname:</td>
         <td><form:input path="pname" /></td>
     </tr>
    
     <tr>
-        <td><form:label path="description"></form:label></td>
+        <td>Description:</td>
         <td><form:input path="description" /></td>
     </tr>
     <tr>
-        <td><form:label path="price"></form:label></td>
+        <td>price:</td>
         <td><form:input path="price" /></td>
     </tr>
     
     <tr>
-        <td colspan="2">
+        	<td></td>
             <td><form:button>Submit</form:button></td>
         </td>
     </tr>
