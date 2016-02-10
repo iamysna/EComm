@@ -1,32 +1,30 @@
 package com.ecommerce.project.services;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.classic.Session;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 
-import com.ecommerce.project.domain.Customer;
+import com.ecommerce.project.domain.User;
 
-@Repository
+
 public class UserServiceImpl implements UserService {
 	
-	@Autowired
-	private SessionFactory sessionFactory;
-	@Override
-	public Integer registerCustomer(Customer customer) {
+	public Integer status;
+	
+	
+	public Integer registerCustomer(User user) {
 		
-		Integer status=null;
-		
+	Configuration configuration=new Configuration();
+	configuration.configure("com/ecommerce/project/services/hibernate.cfg.xml");
+SessionFactory sessionFactory=	configuration.buildSessionFactory();
 		
 	Session session=sessionFactory.openSession();
-	if(session!=null)
-	{
+	Transaction transaction=session.beginTransaction();
 		
-    status= (Integer) session.save(customer);
-	return status;
-		
-		
-	}
+    status= (Integer) session.save(user);
+    transaction.commit();
+
 	return status;
 			
 	}

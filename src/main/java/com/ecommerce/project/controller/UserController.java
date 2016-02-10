@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.ecommerce.project.domain.Customer;
-import com.ecommerce.project.domain.UserAuthentication;
-import com.ecommerce.project.domain.UserRoles;
+import com.ecommerce.project.domain.User;
 import com.ecommerce.project.services.UserService;
 import com.ecommerce.project.services.UserServiceImpl;
 
@@ -17,7 +15,7 @@ import com.ecommerce.project.services.UserServiceImpl;
  * @author Ravi
  * @since 8-2-2016
  * @version 1.0
- * 
+ * O
  * this controller is used get the request from users and landing 
  * the corresponding pages
  *
@@ -53,32 +51,35 @@ public class UserController {
 			                                    @RequestParam("city") String city,
 			                                    @RequestParam("state") String state,
 			                                    @RequestParam("country") String country,
-			                                    @RequestParam("zipCCode") Integer zipCode)
+			                                    @RequestParam("zipCode") Integer zipCode)
 	{
 		
-		Customer customer=new Customer();
-		customer.setUserName(userName);
-		customer.setEmailId(emailId);
 		
-		customer.setAge(age);
-		customer.setMobileNo1(mobileNo1);
-		customer.setMobileNo2(mobileNo2);
-		customer.setAddressLine1(addressLine1);
-		customer.setAddressLine2(addressLine2);
-		customer.setCity(city);
-		customer.setState(state);
-		customer.setCountry(country);
-		customer.setZipCode(zipCode);
 		
-		UserAuthentication userAuthentication=new UserAuthentication();
-		userAuthentication.setUserName(emailId);
-		userAuthentication.setPassword(password);
+		User user=new User();
 		
-		UserRoles userRoles=new UserRoles();
-		userRoles.setUserName(emailId);
-		userRoles.setUserRole("customer");
-		UserService userService=new UserServiceImpl();
-		Integer response=userService.registerCustomer(customer);
+		user.setUserName(userName);
+		user.setEmailId(emailId);
+		
+		user.setAge(age);
+		user.setMobileNo1(mobileNo1);
+		user.setMobileNo2(mobileNo2);
+		user.setAddressLine1(addressLine1);
+		user.setAddressLine2(addressLine2);
+		user.setCity(city);
+		user.setState(state);
+		user.setCountry(country);
+		user.setZipCode(zipCode);
+		
+//		UserAuthentication userAuthentication=new UserAuthentication();
+//		userAuthentication.setUserName(emailId);
+//		userAuthentication.setPassword(password);
+//		
+//		UserRoles userRoles=new UserRoles();
+//		userRoles.setUserName(emailId);
+//		userRoles.setUserRole("user");
+	UserService userService=new UserServiceImpl();
+	Integer response=userService.registerCustomer(user);
 		
 		if(response>0)
 		{

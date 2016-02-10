@@ -1,10 +1,5 @@
 package com.ecommerce.project.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.Table;
-
 /**
  * 
  * @author Ravi
@@ -13,10 +8,9 @@ import javax.persistence.Table;
  *
  */
 
-@Entity
-@Table(name="usermaster")
-@Inheritance(strategy=InheritanceType.JOINED)
+
 public class User {
+	
 	private Integer userId;
 	private String userName;
 	private String emailId;

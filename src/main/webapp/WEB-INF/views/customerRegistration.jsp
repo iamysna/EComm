@@ -15,57 +15,57 @@ prefix="form" %>
 			<div id="form-wrapper">
 				<div  id="user-details">
 					<div>
-						<input type="text" placeholder="User Name *" id="userName"  required="required"/>
+						<input type="text" placeholder="User Name *" name="userName"  required="required"/>
 						<small></small>
 					</div>
 					
 					
 					<div>
-						<input type="text" placeholder="Email Id *" id="emailId" required="required" />
+						<input type="text" placeholder="Email Id *" name="emailId" required="required" />
 						<small></small>
 					</div>
 					<div>
-						<input type="password" placeholder="Password *" id="password" required="required"/>
+						<input type="password" placeholder="Password *" name="password" required="required"/>
 						<small></small>
 					</div>
 					<div>
-						<input type="text" placeholder="Age" id="age" required="required"/>
+						<input type="text" placeholder="Age" name="age" required="required"/>
 						<small></small>
 					</div>
 					<div>
-						<input type="text" placeholder="Contact Number1 (mobile) *" id="mobileNo1" required="required"/>
+						<input type="text" placeholder="Contact Number1 (mobile) *" name="mobileNo1" required="required"/>
 						<small></small>
 					</div>
 					<div>
-						<input type="text" placeholder="Contact Number2 (landline|mobile)" id="mobileNo2" required="required"/>
+						<input type="text" placeholder="Contact Number2 (landline|mobile)" name="mobileNo2" required="required"/>
 						<small></small>
 					</div>
 				</div>
 				<div id="address-details">
 					<div>
-						<input type="text" placeholder="Address Line1 *" id="addressLine1" required="required"/>
+						<input type="text" placeholder="Address Line1 *" name="addressLine1" required="required"/>
 						<small></small>
 					</div>
 					<div>
-						<input type="text" placeholder="Address Line2 *" id="addressLine2" required="required"/>
-						<small></small>
-					</div>
-					
-					<div>
-						<input type="text" placeholder="City *" id="city" required="required"/>
+						<input type="text" placeholder="Address Line2 *" name="addressLine2" required="required"/>
 						<small></small>
 					</div>
 					
 					<div>
-						<input type="text" placeholder="State *" id="state" required="required"/>
+						<input type="text" placeholder="City *" name="city" required="required"/>
+						<small></small>
+					</div>
+					
+					<div>
+						<input type="text" placeholder="State *" name="state" required="required"/>
 						<small></small>
 					</div>
 					<div>
-						<input type="text" placeholder="Country *" id="country" required="required"/>
+						<input type="text" placeholder="Country *" name="country" required="required"/>
 						<small></small>
 					</div>
 					<div>
-						<input type="text" placeholder="ZipCode *" id="zipCode" required="required" />
+						<input type="text" placeholder="ZipCode *" name="zipCode" required="required" />
 						<small></small>
 					</div>
 					<div>

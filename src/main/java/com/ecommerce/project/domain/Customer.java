@@ -16,9 +16,9 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="customermaster")
-@PrimaryKeyJoinColumn(name="customerId")
 
-public class Customer extends User {
+
+public class Customer {
 	
 	
 	private Product product;

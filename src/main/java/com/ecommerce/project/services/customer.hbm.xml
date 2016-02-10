@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="com.ecommerce.project.domain.User" table="user1">  
+    <id name="userId">  
+     <generator class="increment"></generator>  
+    </id>  
+            
+    <property name="userName" column="userName" length="50"></property> 
+        <property name="emailId" column="emailId" length="50"></property>  
+         <property name="password" column="password" length="50"></property>  
+     
+    <property name="age" column="age" length="3"></property> 
+    <property name="mobileNo1" column="mobileNo1" length="15"></property> 
+    <property name="mobileNo2" column="mobileNo2" length="15"></property> 
+    <property name="addressLine1" column="addressLine1" length="50"></property> 
+    <property name="addressLine2" column="addressLine2" length="50"></property> 
+    <property name="city" column="city" length="50"></property> 
+    <property name="state" column="state" length="50"></property> 
+    <property name="country" column="country" length="50"></property> 
+    <property name="zipCode" column="zipCode" length="10"></property>         
+  </class>  
+            
+ </hibernate-mapping>  
