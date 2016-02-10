@@ -1,0 +1,34 @@
+package com.ecomm.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+@Repository
+public class UserDaoImplementation implements UserDao{
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	public void addUser(UserEntity user){
+		this.sessionFactory.getCurrentSession().save(user);
+	}
+	
+	public UserEntity getUser(Long userId){
+		
+		String hql = "FROM UserEntity U WHERE U.USER_ID =" +userId;
+		
+		Session session = this.sessionFactory.getCurrentSession();
+		
+		Query query = session.createQuery(hql);
+		
+		List results = query.list();
+		
+		UserEntity userEntity = null;
+		
+		
+		
+		
+	}
+
+}

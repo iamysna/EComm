@@ -1,5 +1,10 @@
 package com.ecomm.pojo;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(schema="ecomerce",name="customerTable")
 public class Customer {
 	private Integer customerId;
 	private Integer productId;

@@ -1,0 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!--  <%@ taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"%>-->
+
+<%@ taglib prefix="template" tagdir="/WEB-INF/tags/template"%>
+
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+<c:set var="pageTitle">Online Shopping: Admin Home Page</c:set>
+<template:page pageTitle="${pageTitle}" bodyCss="home">
+	<div class="main-container container-fluid">
+		<jsp:include page="/common/admin/leftnavigation.jsp"></jsp:include>
+		<div class="main-content">
+			<div class="page-content">
+			
+				<div class="page-header position-relative">
+					<center><h1>Adding Product....</h1></center>
+				</div>
+			
+		
+			
+			<center>
+			<h4>List Of Products...</h4>
+			<table border="1" align="center">
+			
+				<thead>
+					<tr>
+						<th>ProductId</th>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="product" items="${products}" varStatus="status">
+						<tr>
+							<td>${status.count}</td>
+							<td>${product.name}</td>
+							<td>${product.description}</td>
+							<td>${product.price}</td>
+							</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+			</center>
+		<br/>
+			<form:form method="post" action="addProduct" commandName="product">
+
+				<table align="center">
+
+					<tr>
+						<td>Product Name</td>
+						<td><form:input path="name" />
+						</td>
+					</tr>
+					<tr>
+						<td></td><td colspan="2"><input type="submit" value="addProduct" /></td>
+					</tr>
+				</table>
+			</form:form>
+		</div>
+	</div>
+	</div>
+</template:page>

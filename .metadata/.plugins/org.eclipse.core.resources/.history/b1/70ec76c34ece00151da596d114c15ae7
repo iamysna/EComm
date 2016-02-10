@@ -1,0 +1,11 @@
+package com.ecomm.security;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class UserAuthenticationSuccessHandler implements AuthenticationSuccessHandler{
+	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
+
+	@Autowired
+	private UserDao userDao;
+	
+}

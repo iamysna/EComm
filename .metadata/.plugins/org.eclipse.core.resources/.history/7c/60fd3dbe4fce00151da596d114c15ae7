@@ -1,0 +1,58 @@
+package com.ecomm.security;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ecomm.dao.UserDao;
+
+	public class UserAuthenticationSuccessHandler implements AuthenticationSuccessHandler{
+	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
+
+	@Autowired
+	private UserDao userDao;
+	
+	public void onAuthenticationSuccess(HttpServletRequest request,HttpServletResponse response, 
+			Authentication authentication) throws IOException {
+			 
+			handle(request,response,authentication);
+			clearAuthenticationAttributes(request);
+			
+			protected void handle(HttpServletRequest request,HttpServletResponse response, 
+					Authentication authentication) throws IOException {
+					 
+					String name = authentication.getName();
+					  
+					Object detials = authentication.getDetails();
+					 
+					UserEntity user = userDao.getUserByUsername(name);
+					 
+					System.out.println(" name"+name);
+					 
+					request.getSession().setAttribute("username", name);
+					  
+					request.getSession().setAttribute("user", user);
+					 
+					System.out.println(" details: "+ detials.getClass().getCanonicalName());
+
+					String targetUrl = determineTargetUrl(authentication);
+					
+					if (response.isCommitted()) {
+						 return;
+						 
+						 }
+						 
+						        
+						redirectStrategy.sendRedirect(request, response, targetUrl);
+						   
+						 }
+						 
+						    
+						/** Builds the target URL according to the logic defined in the main class Javadoc. */
+						   
+						 protected String determineTargetUrl(Authentication authentication) {
+			}
+}

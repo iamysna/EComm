@@ -1,0 +1,6 @@
+package com.ecomm.security;
+
+public class UserAuthenticationSuccessHandler implements AuthenticationSuccessHandler{
+	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
+
+}

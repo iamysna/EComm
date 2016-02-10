@@ -1,0 +1,24 @@
+package com.ecomm.security;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.ecomm.dao.UserDao;
+
+public class UserAuthenticationSuccessHandler implements AuthenticationSuccessHandler{
+	private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
+
+	@Autowired
+	private UserDao userDao;
+	
+	public void onAuthenticationSuccess(HttpServletRequest request,HttpServletResponse response, 
+			Authentication authentication) throws IOException {
+			 
+			handle(request, response, authentication);
+			clearAuthenticationAttributes(request);
+			 
+			}
+}

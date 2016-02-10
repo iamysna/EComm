@@ -1,0 +1,20 @@
+package com.ecomm.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class UserDaoImplementation implements UserDao{
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	public void addUser(UserEntity user){
+		this.sessionFactory.getCurrentSession().save(user);
+	}
+	
+	public UserEntity getUser(Long userId){
+		
+	}
+
+}

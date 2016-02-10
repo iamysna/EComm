@@ -1,0 +1,72 @@
+package com.ecomm.dao;
+
+import java.util.List;
+
+import javax.management.Query;
+
+import org.apache.catalina.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import com.ecomm.pojo.User;
+
+@Repository
+public class UserDaoImplementation implements UserDao{
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	public void addUser(User user){
+		this.sessionFactory.getCurrentSession().save(user);
+	}
+	
+	public User getUser(Long userId){
+		
+		String hql = "FROM User U WHERE U.USER_ID =" +userId;
+		
+		Session session = this.sessionFactory.getCurrentSession();
+		
+		Query query = session.createQuery(hql);
+		
+		List<User> results = query.list();
+		
+		User user = null;
+		
+		if(results!= null && results.size() > 0){
+			user = (User) results.get(0);
+			}
+		return user;	
+	}
+	
+	public List<User> getAllUsers(){
+		return this.sessionFactory.getCurrentSession().createQuery("from User").list();
+	}
+	
+	@Transactional
+	public User getUserByUserName(String userName){
+		
+		String hql = "FROM User U WHERE U.userName = '"+userName+"'";
+		
+		Session session = this.sessionFactory.getCurrentSession();
+			
+		Query query = session.createQuery(hql);
+			
+		System.out.println("query :"+query.getQueryString());
+			
+		List results = query.list();
+			
+		User user = null;
+			
+		if(results!= null && results.size() > 0){
+				
+		user = (User) results.get(0);
+		}
+		return user;
+		
+	}
+	
+
+}

@@ -1,0 +1,16 @@
+<div id="sidebar" class="sidebar">
+	<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+		<ul class="nav nav-list" >
+
+			<li><a href="addProduct"> <i class="icon-hand-right icon-animated-hand-pointer blue"></i> <span
+					class="menu-text"> Add Product </span>
+			</a></li>
+			<li><a href="bulkUploadProducts"> <i class="icon-hand-right icon-animated-hand-pointer blue"></i> <span
+					class="menu-text"> Bulk Upload Products </span>
+			</a></li>
+			
+			</a></li>
+		</ul>
+	</div>
+</div>
+

@@ -1,9 +1,16 @@
 package com.ecomm.pojo;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
 public class User {
-	private Integer userId;
+	private Long userId;
+	private String role;
+	private String password;
 	private String firstName;
 	private String lastName;
+	private String userName;
 	private String emailId;
 	private Long mobileNumber;
 	private Integer age;
@@ -14,18 +21,45 @@ public class User {
 	private String state;
 	private String country;
 	private Long zipCode;
+	
+	
 	/**
 	 * @return the userId
 	 */
-	public Integer getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 	/**
 	 * @param userId the userId to set
 	 */
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
+	/**
+	 * @return the role
+	 */
+	public String getRole() {
+		return role;
+	}
+	/**
+	 * @param role the role to set
+	 */
+	public void setRole(String role) {
+		this.role = role;
+	}
+	/**
+	 * @return the password
+	 */
+	public String getPassword() {
+		return password;
+	}
+	/**
+	 * @param password the password to set
+	 */
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	/**
 	 * @return the firstName
 	 */
@@ -49,6 +83,19 @@ public class User {
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	
+	/**
+	 * @return the userName
+	 */
+	public String getUserName() {
+		return userName;
+	}
+	/**
+	 * @param userName the userName to set
+	 */
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	/**
 	 * @return the emailId

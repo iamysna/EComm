@@ -1,0 +1,5 @@
+package com.ecomm.security;
+
+public class UserAuthenticationSuccessHandler implements AuthenticationSuccessHandler{
+
+}

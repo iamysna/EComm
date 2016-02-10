@@ -1,0 +1,15 @@
+package com.ecomm.dao;
+
+import java.util.List;
+
+public interface UserDao {
+	
+	public void addUser(UserEntity user);
+	
+	public UserEntity getUser(Long userId);
+	
+	public UserEntity getUserByUserName(String userName);
+	
+	public List<UserEntity> getAllUsers();
+
+}
