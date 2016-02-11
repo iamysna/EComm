@@ -26,6 +26,7 @@
 
    <!-- List of XML mapping files -->
    <mapping resource="com/ecommerce/project/services/customer.hbm.xml"/>
+   <mapping class="com.ecommerce.project.domain.Product"/>
 
 </session-factory>
 </hibernate-configuration>

@@ -6,6 +6,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import com.ecommerce.project.domain.User;
+import com.ecommerce.project.util.HibernateUtil;
 
 
 public class UserServiceImpl implements UserService {
@@ -15,9 +16,7 @@ public class UserServiceImpl implements UserService {
 	
 	public Integer registerCustomer(User user) {
 		
-	Configuration configuration=new Configuration();
-	configuration.configure("com/ecommerce/project/services/hibernate.cfg.xml");
-SessionFactory sessionFactory=	configuration.buildSessionFactory();
+SessionFactory sessionFactory=	HibernateUtil.getSessionFactory();
 		
 	Session session=sessionFactory.openSession();
 	Transaction transaction=session.beginTransaction();

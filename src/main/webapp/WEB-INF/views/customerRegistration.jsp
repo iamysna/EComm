@@ -7,8 +7,15 @@ prefix="form" %>
 <body>
 <section id="body-section">
 		<form action="customerRegistration" id="seller-registration-form" method="post">
+			
 			<div>
-				<p>Seller Registration</p>
+			
+			<h2>${message}
+			</h2>
+			</div>
+			
+			<div>
+				<p>Customer Registration</p>
 			</div>
 			<div id="sellerRegStatusDiv" style="color: red;font: bold;font-size: medium;">
 			</div>
@@ -81,5 +88,5 @@ prefix="form" %>
 
 
 </body>
-t>
+
 </html>

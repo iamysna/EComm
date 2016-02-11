@@ -1,8 +1,21 @@
 package com.ecommerce.project.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name="product")
 public class Product {
 	
+	@Id
+	@GenericGenerator(strategy="increment" ,name="myGenerator")
+	@GeneratedValue(generator="myGenerator")
 	private Integer prooductId;
+	
 	private String productName;
 	private String description;
 	private Double price;

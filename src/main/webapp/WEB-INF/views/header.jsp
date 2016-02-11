@@ -71,7 +71,10 @@
 				</a>
 			</div>
 		</div>
-	</nav>
+	</nav><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	
+	<h1><a href="customer"><font color="red">For Customer</font></a></h1><br><br>
+	<h1><a href="admin"><font color="red">For Admin</font></a></h1><br><br>
 	
 	
 

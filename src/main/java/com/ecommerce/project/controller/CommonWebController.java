@@ -24,5 +24,17 @@ public class CommonWebController {
 		
 		return new ModelAndView(WEB_HOME);
 	}
+	@RequestMapping(value = "customer", method = RequestMethod.GET)
+	public ModelAndView  customerHome() {
+		
+		
+		return new ModelAndView("customer");
+	}
+	@RequestMapping(value = "admin", method = RequestMethod.GET)
+	public ModelAndView  adminHome() {
+		
+		
+		return new ModelAndView("admin");
+	}
 	
 }

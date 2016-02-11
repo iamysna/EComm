@@ -6,7 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
-failure
+<body><center>
+<h1><a href="ViewProducts">View Product</a></h1><br>
+<h1><a href="ViewProducts">Update Profile</a></h1><br>
+<h1><a href="ViewProducts">Forgot Password</a></h1><br>
+</center>
 </body>
 </html>

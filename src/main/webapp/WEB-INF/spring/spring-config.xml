@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
+
+	<!--Spring Security HTTP basic authentication configuration -->
+	<http>
+		<intercept-url pattern="/home.htm" access="permitAll" />
+		<intercept-url pattern="/customer.htm" access="ROLE_CUSTOMER"/>
+		<intercept-url pattern="/admin.htm" access="ROLE_ADMIN"/>
+		<http-basic />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="customer" password="customer" authorities="ROLE_CUSTOMER" />
+
+				<user name="admin" password="admin" authorities="ROLE_ADMIN" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>
