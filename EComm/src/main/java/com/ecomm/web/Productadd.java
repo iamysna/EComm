@@ -1,17 +1,29 @@
 package com.ecomm.web;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+@Entity
+@Table(name="product1")
+
 public class Productadd {
 
-	
-	private Integer productid;
+	@Id
+	@GenericGenerator(strategy="increment", name="g1")
+	@GeneratedValue(generator="g1")
+	private Integer id;
 	private String pname;
 	private String description;
 	private Integer price;
-	public Integer getProductid() {
-		return productid;
+	public Integer getId() {
+		return id;
 	}
-	public void setProductid(Integer productid) {
-		this.productid = productid;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 	public String getPname() {
 		return pname;
@@ -31,8 +43,5 @@ public class Productadd {
 	public void setPrice(Integer price) {
 		this.price = price;
 	}
-	
-	
-	
 	
 }

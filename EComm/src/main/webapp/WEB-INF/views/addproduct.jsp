@@ -9,37 +9,37 @@
     <title>product</title>
 </head>
 <body>
+<h6 align="right"><a href=login">Click here to logout</a></h6>
+<center>
  
-<h2>Product</h2>
- <h6><a href="<c:url value='j_spring_security_logout'/>">Click here to logout</a></h6>
- 
-<form:form method="post" action="pro" commandName="product">
+<h2>Product</h2> 
+<form method="post" action="productDetails" >
  
     <table>
     <tr>
-       	<td>productid:</td>
-        <td><form:input path="productid" /></td>
+        <td>productid:</td>
+        <td><input type="text" name="productId" /></td>
     </tr>
     <tr>
-       	<td>productname:</td>
-        <td><form:input path="pname" /></td>
+        <td>productname:</td>
+        <td><input type="text" name="productName" /></td>
     </tr>
    
     <tr>
-        <td>Description:</td>
-        <td><form:input path="description" /></td>
+        <td>Description</td>
+        <td><input type="text" name="description" /></td>
     </tr>
     <tr>
-        <td>price:</td>
-        <td><form:input path="price" /></td>
+        <td>Price</td>
+        <td><input type="text" name="price" /></td>
     </tr>
     
     <tr>
-        	<td></td>
-            <td><form:button>Submit</form:button></td>
+        <td colspan="1">
+            <input type="submit" value="add">
         </td>
     </tr>
 </table> 
-</form:form>
-</body>
+</form>
+</center></body>
 </html>

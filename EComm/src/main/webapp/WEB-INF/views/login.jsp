@@ -10,28 +10,32 @@
 <title>Insert title here</title>
 </head>
 <body><center>
-<h1 id="banner">Customer Login</h1>
-		<form:form name="f" commandName="loginUser" action='j_spring_security_check'
-					method="POST">
-			<table>
-				<tr>
-					<td>Userid:</td>
-					<td><form:input path="name" /></td>
-				</tr>
-				<tr>
-					<td>Password:</td>
-					<td><form:password path="pwd" /></td>
-				</tr>
-				<tr>
-					<td colspan="2">&nbsp;</td>
-				</tr>
-				<tr>
-				<td></td>
-					<td><form:button>Submit</form:button></td>
-					
-				</tr>				
-			</table>
-		</form:form>
+<h1 id="banner">Admin Login</h1>
+		<form method="post" action="j_spring_security_check">  
+  
+    <table>  
+     <tr>  
+      <td colspan="3" style="color: red">${message}</td>  
+  
+     </tr>  
+     <tr>  
+      <td>User Name:</td>  
+      <td><input type="text" name="j_username" />  
+      </td>  
+     </tr>  
+     <tr>  
+      <td>Password:</td>  
+      <td><input type="password" name="j_password" />  
+      </td>  
+     </tr>  
+     <tr>  
+      <td> </td>  
+      <td><input type="submit" value="Login" />  
+      </td>  
+  
+     </tr>  
+    </table>  
+   </form>  
 		
 		
 

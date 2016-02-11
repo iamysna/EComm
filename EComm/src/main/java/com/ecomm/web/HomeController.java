@@ -6,7 +6,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.ecomm.dao.ProductDAO;
+import com.ecomm.dao.ProductImp;
 
 /**
  * Handles requests for the application home page.
@@ -18,17 +22,25 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Loginuser user, Map<String,Object> model) { 
+	public String home() { 
 	return "home";
 		
 	}
+//	@RequestMapping(value="/login" , method=RequestMethod.GET)
+//	public ModelAndView getLoginuPage()
+//	
+//	{
+//		Loginuser log=new Loginuser();
+//		return new ModelAndView("login","loginUser",log);
+//	}
+//	
 	@RequestMapping(value="/login" , method=RequestMethod.GET)
-	public ModelAndView getLoginuPage()
-	
+	public String getLoginuPage()
 	{
-		Loginuser log=new Loginuser();
-		return new ModelAndView("login","loginUser",log);
+		return "login";
+		
 	}
+	
 	
 	@RequestMapping(value = "/denied", method = RequestMethod.GET)
 	public String loginerror(ModelMap model) {
@@ -56,12 +68,30 @@ public class HomeController {
 	@RequestMapping(value="/addproduct" , method=RequestMethod.GET)
 	public ModelAndView addproduct()
 	{
-		Productadd p=new Productadd();
-		return new ModelAndView("addproduct","product", p);
-	}
 	
-	@RequestMapping(value = "/logout", method = RequestMethod.GET)
-	public String logout(ModelMap model) {
-		return "login";
+		return new ModelAndView("addproduct");
 	}
+//	
+//	@RequestMapping(value="/pro",method=RequestMethod.POST)
+//	public ModelAndView productDetails(@RequestParam("id") Integer id,
+//			                                    @RequestParam("pname") String pname,
+//			                                    @RequestParam("description") String description,
+//			                                    @RequestParam("price") Integer price)
+//	{
+//		Productadd p=new Productadd();
+//		p.setId(id);
+//		p.setPname(pname);
+//		p.setDescription(description);
+//		p.setPrice(price);
+//		
+//		ProductDAO pd = new ProductImp();
+//		Integer response= pd.addproduct(p);
+//		if(response>0){
+//			String mes="succeessfully product inserted ";		
+//			return new ModelAndView("moreproducts");
+//		}
+//		else
+//			return new ModelAndView("addproduct");		
+//		
+//	}
 }
