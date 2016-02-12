@@ -14,7 +14,7 @@ public class Product {
 	@Id
 	@GenericGenerator(strategy="increment" ,name="myGenerator")
 	@GeneratedValue(generator="myGenerator")
-	private Integer prooductId;
+	private Integer productId;
 	
 	private String productName;
 	private String description;
@@ -22,14 +22,14 @@ public class Product {
 	/**
 	 * @return the prooductId
 	 */
-	public Integer getProoductId() {
-		return prooductId;
+	public Integer getProductId() {
+		return productId;
 	}
 	/**
 	 * @param prooductId the prooductId to set
 	 */
-	public void setProoductId(Integer prooductId) {
-		this.prooductId = prooductId;
+	public void setProductId(Integer productId) {
+		this.productId = productId;
 	}
 	/**
 	 * @return the productName
