@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-    <%@page import="com.ecommerce.project.domain.Product" %>
+    <%@page import="java.util.List" %>
     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,8 +11,11 @@
 </head>
 <body>
 
-<form:form action="viewProducts" commandName="product">
-<input type="submit" value="View Products">
+
+<% List pList = (List)session.getAttribute("productList");
+   request.setAttribute("pList", pList);
+%>
+
 
 
 <table class="table table-hover">
@@ -25,8 +28,7 @@
                         
                 
                 </tr>
-                <%Product product=new Product(); %>
-<c:forEach var="product" items="${productResponse}">
+<c:forEach var="product" items="${pList}">
 
 
                     <tr>
@@ -39,7 +41,7 @@
                 </tbody>
             </table>
  
-</form:form>
+
 </body>
 
 </html>
